@@ -144,7 +144,7 @@ if [ $RUST_SKIP_BUILD -ne 1 ]; then
   echo "-----> Building frontend"
   (cd "$FRONTEND_DIR" && cargo web deploy)
   mkdir -p target/deploy
-  cp -a "$CARGO_TARGET_DIR/deploy" target/deploy
+  cp -a "$CARGO_TARGET_DIR/deploy" target
   echo "-----> Building backend"
   cargo build $RUST_CARGO_BUILD_FLAGS
   mkdir -p target/release
